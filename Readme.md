@@ -1,6 +1,6 @@
-### (Turbo) Search and Replace 
+## (Turbo) Search and Replace 
 
-## What It Does:
+### What It Does:
 
 1. Removes extra blank lines
 2. Searches and replaces words 
@@ -15,8 +15,8 @@
 4.  Removes soft-hyphens followed by new line (this typically means multi-line words)
 
 
-# Running the script 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Running the script 
+
 <pre><code>
 Usage: postprocess_r4.py [options] <source text directory>
 
