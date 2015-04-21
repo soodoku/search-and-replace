@@ -7,11 +7,11 @@
 	a. takes replacelist.csv that carries word pairs (original_word,replace_with_this_word) 
 	b. open in a unicode editor like Notepad++.
 3. Regex
-	Allows for 0-X consecutive errors within a word.
-	Takes wordlist.csv that carries words and X for each word
-	For instance if a row in wordlist.csv reads: Available,1
-	Av.{0,1}\??[\r\n]*ilable ==> Available
-	Ava.{0,1}\??[\r\n]*lable ==> Available
+	Allows for 0-X consecutive errors within a word.  
+	Takes wordlist.csv that carries words and X for each word  
+	For instance if a row in wordlist.csv reads: Available,1  
+	Av.{0,1}\??[\r\n]*ilable ==> Available  
+	Ava.{0,1}\??[\r\n]*lable ==> Available  
 4.  Removes soft-hyphens followed by new line (this typically means multi-line words)
 
 
@@ -31,5 +31,5 @@ USAGE EXAMPLE :-
     python postprocess.py txt_dir
 
 </code></pre>	
-The script will be post process all text files in 'text' directory and save
-the output file to the 'postprocessed' directory
+
+The script will be post process all text files in 'text' directory and save the output file to the 'postprocessed' directory
