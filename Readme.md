@@ -32,3 +32,7 @@ USAGE EXAMPLE :-
 </code></pre>	
 
 The script will be post process all text files in 'text' directory and save the output file to the 'postprocessed' directory
+
+### License
+
+Scripts are released under the [MIT License](https://github.com/soodoku/Search-And-Replace/blob/master/License.md).
