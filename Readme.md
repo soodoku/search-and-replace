@@ -18,7 +18,7 @@
 ### Running the script 
 
 <pre><code>
-Usage: postprocess_r4.py [options] <source text directory>
+Usage: postprocess.py [options] <source text directory>
 
 Options:
   -h, --help            show this help message and exit
@@ -28,7 +28,7 @@ Options:
                         False)
 
 USAGE EXAMPLE :-
-    python postprocess_r2.py txt_dir
+    python postprocess.py txt_dir
 
 </code></pre>	
 The script will be post process all text files in 'text' directory and save
