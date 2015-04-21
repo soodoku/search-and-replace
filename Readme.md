@@ -4,8 +4,8 @@
 
 1. Removes extra blank lines
 2. Searches and replaces words 
-	a. takes replacelist.csv that carries word pairs (original_word,replace_with_this_word) 
-	b. open in a unicode editor like Notepad++.
+    a. takes replacelist.csv that carries word pairs (original_word,replace_with_this_word)   
+    b. open in a unicode editor like Notepad++.
 3. Regex
 	Allows for 0-X consecutive errors within a word.  
 	Takes wordlist.csv that carries words and X for each word  
