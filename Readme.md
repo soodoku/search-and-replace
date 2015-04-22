@@ -1,23 +1,25 @@
-## (Turbo) Search and Replace 
+### Turbo Search and Replace 
 
-### What It Does:
-
-1. Removes extra blank lines
-2. Searches and replaces words 
-    - Takes replacelist.csv that carries word pairs (original_word, replace_with_this_word)   
-    - Open in a unicode editor like Notepad++.
-3. Regex
-	Allows for 0-X consecutive errors within a word.  
+The script does the following:
+1. Removes extra blank lines.
+2. Removes soft-hyphens followed by new line (this typically means multi-line words)
+2. Searches and replaces a list of words:  
+   The script takes a csv (replacelist.csv) that carries words to be replaced, and replacement words. 
+3. Regular expression based replacement:
+	Allows for 0-X consecutive errors within a word.
 	Takes wordlist.csv that carries words and X for each word  
 	For instance if a row in wordlist.csv reads: Available,1  
 	Av.{0,1}\??[\r\n]*ilable ==> Available  
 	Ava.{0,1}\??[\r\n]*lable ==> Available  
-4.  Removes soft-hyphens followed by new line (this typically means multi-line words)
 
-### Running the script 
+#### Running the script 
+
+The script looks for two files:  
+1. replacelist.csv -- carries word pairs (original_word, replace_with_this_word). Here's a sample [replacelist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/replacelist.csv)
+2. wordlist.csv -- carries correct word, and number of consecutive errors. Here's a sample [wordlist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/wordlist.csv)
 
 <pre><code>
-Usage: postprocess.py [options] <source text directory>
+Usage: postprocess.py [options] source_txt_directory
 
 Options:
   -h, --help            show this help message and exit
@@ -26,13 +28,12 @@ Options:
   -r, --resume          Resume postprocessing (Skip if existing) (default:
                         False)
 
-USAGE EXAMPLE :-
+EXAMPLE:
     python postprocess.py txt_dir
-
 </code></pre>	
 
-The script will be post process all text files in 'text' directory and save the output file to the 'postprocessed' directory
+The script will be post process all text files in 'text' directory and save the output file to the 'postprocessed' directory.
 
-### License
+#### License
 
 Scripts are released under the [MIT License](https://github.com/soodoku/Search-And-Replace/blob/master/License.md).
