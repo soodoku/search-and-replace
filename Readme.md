@@ -1,6 +1,6 @@
 ### Turbo Search and Replace 
 
-The script does the following:
+The script does the following:  
 1. Removes extra blank lines.  
 2. Removes soft-hyphens followed by new line (this typically means multi-line words).  
 2. Searches and replaces a list of words:   
@@ -15,8 +15,8 @@ The script does the following:
 #### Running the script 
 
 The script looks for two files:  
-1. replacelist.csv -- carries word pairs (original_word, replace_with_this_word). Here's a sample [replacelist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/replacelist.csv)
-2. wordlist.csv -- carries correct word, and number of consecutive errors. Here's a sample [wordlist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/wordlist.csv)
+1. replacelist.csv -- carries word pairs (original_word, replace_with_this_word). Here's a sample [replacelist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/replacelist.csv)  
+2. wordlist.csv -- carries correct word, and number of consecutive errors. Here's a sample [wordlist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/wordlist.csv)  
 
 <pre><code>
 Usage: postprocess.py [options] source_txt_directory
