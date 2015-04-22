@@ -1,17 +1,21 @@
 ### Turbo Search and Replace 
 
-The script does the following:  
-
+#### Functionality
 1. Removes extra blank lines.  
 2. Removes soft-hyphens followed by new line (this typically means multi-line words).  
 3. Searches and replaces a list of words:   
-   The script takes a csv (replacelist.csv) that carries words to be replaced, and replacement words.  
+   The script takes a csv ([replacelist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/replacelist.csv)) that carries words to be replaced, and replacement words.  
 4. Regular expression based replacement: 
    * Allows for 0-X consecutive errors within a word.  
-   * Takes wordlist.csv that carries words and X for each word    
+   * Takes [wordlist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/wordlist.csv) that carries words and X for each word    
    * For instance if a row in wordlist.csv reads: Available,1    
    * Av.{0,1}\??[\r\n]*ilable ==> Available    
    * Ava.{0,1}\??[\r\n]*lable ==> Available 
+5. Here's a [sample of the input file](https://github.com/soodoku/Search-And-Replace/tree/master/txt_dir) and [sample output](https://github.com/soodoku/Search-And-Replace/tree/master/postprocessed).
+
+#### Application
+
+The script can be used for fixing dirty data. For instance, one application for the script is postprocessing dirty OCR data. See more at: [A Quick Scan: From Paper to Digital](http://gbytes.gsood.com/2014/05/28/a-quick-scan-from-paper-to-digital-data/).  
 
 #### Running the script 
 
