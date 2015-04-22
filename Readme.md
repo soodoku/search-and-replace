@@ -6,17 +6,17 @@ The script does the following:
 2. Searches and replaces a list of words:   
    The script takes a csv (replacelist.csv) that carries words to be replaced, and replacement words. 
 3. Regular expression based replacement:  
-    Allows for 0-X consecutive errors within a word.  
-    Takes wordlist.csv that carries words and X for each word    
-    For instance if a row in wordlist.csv reads: Available,1    
-    Av.{0,1}\??[\r\n]*ilable ==> Available    
-    Ava.{0,1}\??[\r\n]*lable ==> Available     
+   * Allows for 0-X consecutive errors within a word.  
+   * Takes wordlist.csv that carries words and X for each word    
+   * For instance if a row in wordlist.csv reads: Available,1    
+   * Av.{0,1}\??[\r\n]*ilable ==> Available    
+   * Ava.{0,1}\??[\r\n]*lable ==> Available     
 
 #### Running the script 
 
 The script looks for two files:  
 1. replacelist.csv -- carries word pairs (original_word, replace_with_this_word). Here's a sample [replacelist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/replacelist.csv)  
-2. wordlist.csv -- carries correct word, and number of consecutive errors. Here's a sample [wordlist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/wordlist.csv)  
+2. wordlist.csv -- carries the correct word, and number of consecutive errors. Here's a sample [wordlist.csv](https://github.com/soodoku/Search-And-Replace/blob/master/wordlist.csv)  
 
 <pre><code>
 Usage: postprocess.py [options] source_txt_directory
