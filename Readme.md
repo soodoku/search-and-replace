@@ -1,11 +1,12 @@
 ### Turbo Search and Replace 
 
-The script does the following:      
+The script does the following:  
+
 1. Removes extra blank lines.  
 2. Removes soft-hyphens followed by new line (this typically means multi-line words).  
-2. Searches and replaces a list of words:   
+3. Searches and replaces a list of words:   
    The script takes a csv (replacelist.csv) that carries words to be replaced, and replacement words.  
-3. Regular expression based replacement: 
+4. Regular expression based replacement: 
    * Allows for 0-X consecutive errors within a word.  
    * Takes wordlist.csv that carries words and X for each word    
    * For instance if a row in wordlist.csv reads: Available,1    
