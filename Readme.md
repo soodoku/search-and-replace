@@ -41,4 +41,4 @@ The script will be post process all text files in 'text' directory and save the 
 
 #### License
 
-Scripts are released under the [MIT License](License.md).
+Scripts are released under the [MIT License](https://opensource.org/licenses/MIT).
