@@ -1,5 +1,7 @@
 ### Turbo Search and Replace 
 
+[![Build Status](https://travis-ci.org/soodoku/search-and-replace.svg?branch=master)](https://travis-ci.org/soodoku/search-and-replace)
+
 #### Functionality
 1. Removes extra blank lines.  
 2. Removes soft-hyphens followed by new line (this typically means multi-line words).  
