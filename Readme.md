@@ -22,13 +22,13 @@ Clone this repository:
 
 `git clone https://github.com/soodoku/search-and-replace.git`
 
-Navigate to clean-names
+Navigate to search-and-replace
 
 Run `python setup.py install`
 
 #### Running the script 
 
-The script looks for two files:  
+The script takes two files:  
 1. replacelist.csv -- carries word pairs (original_word, replace_with_this_word). Here's a sample [replacelist.csv](replacelist.csv)  
 2. wordlist.csv -- carries the correct word, and number of consecutive errors tolerated. All the variously misspelled words will be replaced with the correct word. Here's a sample [wordlist.csv](wordlist.csv)  
 
