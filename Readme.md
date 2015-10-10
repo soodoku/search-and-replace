@@ -16,6 +16,16 @@
    * Ava.{0,1}\??[\r\n]*lable ==> Available 
 5. [Sample input](txt_dir/) and [sample output](postprocessed).
 
+### Installation
+
+Clone this repository:
+
+`git clone https://github.com/soodoku/search-and-replace.git`
+
+Navigate to clean-names
+
+Run `python setup.py install`
+
 #### Running the script 
 
 The script looks for two files:  
