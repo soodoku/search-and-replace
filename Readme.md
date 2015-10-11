@@ -1,6 +1,7 @@
 ### Turbo Search and Replace 
 
 [![Build Status](https://travis-ci.org/soodoku/search-and-replace.svg?branch=master)](https://travis-ci.org/soodoku/search-and-replace)
+[![Build status](https://ci.appveyor.com/api/projects/status/dd6weascqvw4wg5o?svg=true)](https://ci.appveyor.com/project/soodoku/search-and-replace)
 
 #### Functionality
 
