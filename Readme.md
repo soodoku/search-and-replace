@@ -29,9 +29,9 @@ Run `python setup.py install`
 
 #### Running the script 
 
-The script expects the following two files in the same directory:
-1. replacelist.csv -- carries word pairs (original_word, replace_with_this_word). (Sample [replacelist.csv](replacelist.csv))
-2. wordlist.csv -- carries the correct word, and number of consecutive errors tolerated. All the variously misspelled words will be replaced with the correct word. (Sample [wordlist.csv](wordlist.csv))  
+The script expects the following two files in the same directory:  
+1. replacelist.csv -- carries word pairs (original_word, replace_with_this_word). (Sample [replacelist.csv](replacelist.csv).)  
+2. wordlist.csv -- carries the correct word, and number of consecutive errors tolerated. All the variously misspelled words will be replaced with the correct word. (Sample [wordlist.csv](wordlist.csv).)  
 
 #### Usage
 `postprocess.py [options] source_txt_directory`
