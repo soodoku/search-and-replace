@@ -15,7 +15,6 @@
    * For instance if a row in wordlist.csv reads: Available,1    
    * Av.{0,1}\??[\r\n]*ilable ==> Available    
    * Ava.{0,1}\??[\r\n]*lable ==> Available 
-5. [Sample input](txt_dir/) and [sample output](postprocessed).
 
 ### Installation
 
@@ -49,7 +48,7 @@ Options:
 ### Example:
 `python postprocess.py txt_dir`
 
-The script will be post process all text files in 'txt_dir' directory and save the output file to the 'postprocessed' directory.
+The script will be post process all text files in 'txt_dir' directory and save the output file to the 'postprocessed' directory. [Sample input](txt_dir/) and [sample output](postprocessed).
 
 #### Application
 
