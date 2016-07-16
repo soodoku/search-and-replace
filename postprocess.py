@@ -40,10 +40,10 @@ def parse_command_line(argv):
     
     parser.add_option("-o", "--outdir", action="store", 
                       type="string", dest="outdir", default=TEXT_OUTPUT_DIR,
-                      help="Text output directory (default: %s)" % (TEXT_OUTPUT_DIR))
+                      help="Text output directory (default: {0!s})".format((TEXT_OUTPUT_DIR)))
     parser.add_option("-r", "--resume", action="store_true", 
                       dest="resume", default=RESUME_PP,
-                      help="Resume postprocessing (Skip if existing) (default: %s)" % (RESUME_PP))
+                      help="Resume postprocessing (Skip if existing) (default: {0!s})".format((RESUME_PP)))
     return parser.parse_args(argv)
     
 def postproc_re(text, words):
@@ -68,15 +68,15 @@ def postproc_re(text, words):
         w = w.decode('utf-8')
         w = w.strip(u'\ufeff')
         for i in range(1, len(w) - 1):
-            dc = r".{0,%d}\??[\r\n]*" % (n)
+            dc = r".{{0,{0:d}}}\??[\r\n]*".format((n))
             r = re.escape(w[0:i]) + dc + re.escape(w[i+1:])
             replace = []
-            p = "(?P<w%d>" % idx + r + ")"
+            p = "(?P<w{0:d}>".format(idx) + r + ")"
             text = re.sub(p, sub_callback, text, flags=re.I|re.U|re.DOTALL)
             replaceset = set(replace)
-            print("PP rexpr(%d): %s ==> %s" % (len(replace), r, w))
+            print("PP rexpr({0:d}): {1!s} ==> {2!s}".format(len(replace), r, w))
             for r in replaceset:
-                print("    %s(%d)" % (r, replace.count(r)))
+                print("    {0!s}({1:d})".format(r, replace.count(r)))
         idx += 1
     return text
     
@@ -86,21 +86,21 @@ def postproc_searchreplace(text, replace):
     for a, b in replace:
         c = re.escape(a.decode('utf-8'))
         (text, n) = re.subn(c, b, text, flags=re.U)
-        print("PP replace(%d): %s ==> %s" % (n, a, b))
+        print("PP replace({0:d}): {1!s} ==> {2!s}".format(n, a, b))
     return text
 
 def postproc_remove_blank_line(text):
     """Returns text after remove blank lines
     """
     (text, n) = re.subn(r'^\s*\r?\n?', '', text, flags=re.M)
-    print("PP remove blank line(%d)" % (n))
+    print("PP remove blank line({0:d})".format((n)))
     return text
 
 def postproc_remove_hyphen(text):
     """Returns text after remove hyphen and concatenate the word is split across two lines
     """
     (text, n) = re.subn(ur'([A-Z])[\-\u00ad][\r\n]+', r'\1', text, flags=re.I|re.U)
-    print("PP remove hyphen(%d)" % (n))
+    print("PP remove hyphen({0:d})".format((n)))
     return text
 
 def getSize(filename):
@@ -121,7 +121,7 @@ def postproc_main(options):
     relpath = re.sub(r'^[\.|\\|\/]*', '', relpath)
     extdir = options.outdir + '/' + os.path.dirname(relpath)
     fname = extdir + '/' + os.path.basename(relpath)
-    print("Postprocessing: %s" % (options.filename))
+    print("Postprocessing: {0!s}".format((options.filename)))
     try:
         if not os.path.exists(extdir):
             os.makedirs(extdir)
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     sys.setdefaultencoding("utf-8")
     sys.stdout = Logger()
     
-    print("%s r6 (2013/07/08)\n" % (sys.argv[0]))
+    print("{0!s} r6 (2013/07/08)\n".format((sys.argv[0])))
 
     (options, args) = parse_command_line(sys.argv)
 
